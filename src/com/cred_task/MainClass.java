@@ -16,7 +16,6 @@ public class MainClass {
 		sc = new Scanner(System.in);
 		/**Creating customizeGame object to customize the game */
 		CustomizeGame customizeGame = new CustomizeGame();
-		
 		/** depend upon user's choice it will customize the game by using getChoice method of CustomizeGame class */
 		System.out.println("Enter 1 to add new strategie,enter 2 to change no. of rounds, 3 for default");
 		int choice = sc.nextInt();

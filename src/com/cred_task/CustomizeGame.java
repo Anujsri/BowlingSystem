@@ -8,7 +8,7 @@ public class CustomizeGame {
 	
 	/** creating strategies object to add new strategies or initialize default strategies i.e spare and strike*/
 	Strategies strategies = new Strategies();
-	int maxSet=10; /** Default value of number of set */
+	static int maxSet=10; /** Default value of number of set */
 	
 	/** constructor to change set value based on user's choice*/
 	CustomizeGame(int maxSet){
