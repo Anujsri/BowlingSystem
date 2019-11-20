@@ -66,5 +66,5 @@ I  am using five classes to desing it
    1. when we run Mainclass it will ask to user *Enter 1 to add new strategie,enter 2 to change no. of rounds, 3 for default*
    ###### If he enter 1:
       to define any new Strategy we need four parameters two numbers for try1 and try2 value, bonus and strategy name
-
+<img width="700" alt="Screenshot 2019-11-21 at 2 08 14 AM" src="https://user-images.githubusercontent.com/25398413/69279209-e2f27180-0c09-11ea-92fa-b5fa6426ce5b.png">
 # Thank You!
