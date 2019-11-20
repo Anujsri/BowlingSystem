@@ -70,7 +70,7 @@ I  am using five classes to desing it
 
   ###### If he enters 2:
       he can change number of set default was 10 
-      <img width="675" alt="Screenshot 2019-11-21 at 2 00 13 AM" src="https://user-images.githubusercontent.com/25398413/69279508-8774b380-0c0a-11ea-8f3e-58f6565bc353.png">
+<img width="675" alt="Screenshot 2019-11-21 at 2 00 13 AM" src="https://user-images.githubusercontent.com/25398413/69279508-8774b380-0c0a-11ea-8f3e-58f6565bc353.png">
 
 
 # Thank You!
