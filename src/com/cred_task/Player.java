@@ -1,41 +1,50 @@
 package com.cred_task;
-
 import java.util.ArrayList;
-import java.util.Hashtable;
 import java.util.Scanner;
-
+/** this class used to store each players total score,score of each set,and values which he got
+ * in try1 and try2 in each set and bonus based on the Strategies */
 public class Player {
-	private int id;
-	private String name;
-	private int totalScore;
-	private Bowling bowling;
-	private int each_set_score;
-	Hashtable<Integer,Player> hm = new Hashtable<Integer,Player>();
+	private int id; 			/** player id*/
+	private String name;		/** player name*/
+	private int totalScore;		/** each player's score*/
+	private Bowling bowling;	/** this Bowling object will contains try1 and try2 value of each set*/
+	private int each_set_score;	/** each set score for each player*/
 	Player(){}
+	
+	/** constructor to inialize the Player object*/
 	public Player( int id, String name )
 	{
 		this.id = id;
 		this.name = name;
 		this.totalScore = 0;
 	}
+	
+	/** constructor to inialize the Player object(overloading) with player's id,bowling object and each set score*/
 	Player(int id,Bowling bowling,int each_set_score){
 		this.id = id;
 		this.bowling = bowling;
 		this.each_set_score = each_set_score;
 	}
+	
+	/** constructor to inialize the Player object(overloading) with players's id,name and his total score*/
 	Player(Player player){
 		this.id = player.id;
 		this.name = player.name;
 		this.totalScore = player.totalScore;
 	}
+	
+	/** class method  to add each player's total score*/
 	public void addScore( int score )
 	{
 		this.totalScore += score;
 	}
+	
+	/** class method  to get each player's total score*/
 	public int getScore() {
 		return totalScore;
 	}
 	
+	/** this class method will create and return ArrayList of Players */
 	public static ArrayList<Player> getPlayerDetails()
 	{
 		ArrayList<Player> players = new ArrayList<Player>();
@@ -51,9 +60,10 @@ public class Player {
 			players.add(new Player(player_id, name));
 			player_id++;
 		}
-		
 		return players;	
 	}
+	
+	/** this class method will start the game and print each player's id,name and his total score */
 	public void startGame(ArrayList<Player> players) {
 		Bowling bowling = new Bowling();
 		CustomizeGame customizeGame = new CustomizeGame();
@@ -68,6 +78,8 @@ public class Player {
 			System.out.println("Player id : "+player.id + " Name : "+player.name + " Score " + player.getScore());
 		}
 	}
+	
+	/** this class method will return the winner of the game */
 	public void getWinner(ArrayList<Player> players) {
 		int maximum = 0;
 		Player winner = new Player(0,"");
@@ -80,6 +92,7 @@ public class Player {
 		System.out.println("Winner is with Player id : "+winner.id + " Name : "+winner.name + " Score " + winner.getScore());
 	}
 	
+	/** this class method will return each set score of each player */
 	public static void getEachSetScore() {
 		ArrayList<Player> players = Bowling.players;
 		System.out.println("Anuj");
