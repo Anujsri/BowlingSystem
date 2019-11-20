@@ -1,13 +1,13 @@
 
 ## Bowling
- Use OOPs based design to implement Bowling Alley game,the purpose is to get winner of the game.
+Use OOPs based design to implement the Bowling Alley game, the purpose is to get the winner of the game.
  
 ## Technology Used ##
 
  Java
  
 ## Usage ##
-I  am using five classes to desing it                                                                                                          
+I  am using five classes to design it                                                                                                          
 
      1. MainClass
      2. Strategies
@@ -24,10 +24,10 @@ I  am using five classes to desing it
                                                            
                                                    # Strategies Class
                                                                                                          
-  1. As a user has two try in each sets so we need two inputs to define a new rule(Strategies) like spare and strike 
-     and bonus based on the Strategies.
+  1. As a user has two tries in each sets so we need two inputs to define a new rule(Strategies) like spare and strike 
+     and a bonus based on the Strategies.
      
-  2. Let's take an example to understand it,suppose we want to create a new Strategy such that if pin knocked in try1 and 
+  2. Let's take an example to understand it, suppose we want to create a new Strategy such that if pin knocked in try1 and 
      try2 in a set, both are zero then we will deduct 10 points from a player's score.
                                   input1= 0, input2=0, bonus = -10, strategie_name="XYZ"
                                   new Strategies(input1,input2,bonus,strategie_name)
@@ -38,8 +38,8 @@ I  am using five classes to desing it
   
                                                   # Bowling Class
                                                                                                           
-  The purpose of this class to setup an environment to execute Bowling game like storing the value of try1 and try2 
-  and each set to this I am creating an array which will store it,get bonus based on the strategy and get the total 
+  The purpose of this class to set up an environment to execute Bowling game like storing the value of try1 and try2 
+  and each set to this I am creating an array which will store it, get a bonus based on the strategy and get the total 
   score of each player
      
  #
@@ -47,18 +47,18 @@ I  am using five classes to desing it
                                                   # CustomizeGame Class                                            
                                     
   1. The purpose of this class to customize the Bowling Alley game like in problem statement we have given two strategies
-     and set size 10 but by this class based on user's choice we can add more strategies and can change set size.
+     and set size 10 but by this class based on user's choice, we can add more strategies and can change set size.
      
   2. A user will have three option
             1. He can define a new strategy
-            2. He can change number of set (by default it is 10)
-            3. If he does choose optoin 1 or 2 default set value and strategies will be defined CustomizeGame class itself
+            2. He can change the number of the set (by default it is 10)
+            3. If he does choose option 1 or 2 default set value and strategies will be defined CustomizeGame class itself
 #
  
                                                   # Player Class
                                                                                                           
-  this class used to store each players total score,score of each set,and values which he got in try1 and try2 in each set
-  and bonus based on the Strategies.
+  this class used to store each players total score, the score of each set, and values which he got in try1 and try2 in each set
+  and a bonus based on the Strategies.
   
  #
 
