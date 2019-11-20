@@ -7,10 +7,14 @@ public class MainClass {
 		sc = new Scanner(System.in);
 		CustomizeGame customizeGame = new CustomizeGame();
 		Player player = new Player();
-//		Strategies strategies = new Strategies();
 		System.out.println("Enter 1 to add new strategie,enter 2 to change no. of rounds, 3 for default");
 		int choice = sc.nextInt();
 		customizeGame.getChoice(choice);
+		ArrayList<Strategies> array = Strategies.getStrategies();
+		for(Strategies strategie : array) {
+			System.out.println("Array is "+ strategie.bonus);
+		}
+		
 		ArrayList<Player> players = Player.getPlayerDetails();
 		player.startGame(players);
 		player.getWinner(players);
@@ -18,13 +22,12 @@ public class MainClass {
 		sc.nextLine();
 		String user_choice = sc.nextLine();
 		System.out.println(user_choice);
-		if(user_choice.equals("Yes")) {
+		if(user_choice.equalsIgnoreCase("Yes")) {
 			Player.getEachSetScore();
 		}
 		else{
 			System.exit(0);
 		}
-
 //		strategies.mapping(8,2);
 	}
 }

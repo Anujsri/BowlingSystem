@@ -56,8 +56,9 @@ public class Player {
 	}
 	public void startGame(ArrayList<Player> players) {
 		Bowling bowling = new Bowling();
+		CustomizeGame customizeGame = new CustomizeGame();
 		Bowling round_array[];
-		int maxSet = CustomizeGame.maxSet;
+		int maxSet = customizeGame.maxSet;
 		System.out.println("maxSet in pka : "+ maxSet);
 		bowling.round_array = new Bowling[maxSet];
 		for(Player player : players) {
