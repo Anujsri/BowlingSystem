@@ -1,5 +1,7 @@
 package com.cred_task;
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random; 
 public class Bowling {
 	Scanner sc = new Scanner(System.in);
@@ -48,9 +50,10 @@ public class Bowling {
 			return rand.nextInt(max-range);
 		}
 	}
-	public int get_Score(Bowling[] round_array) {
+	public int get_Score(Bowling[] round_array,int palyer_id) {
 		int total = 0;
 		int bonus = 0;
+		Player player;
 		for(int i=0;i<round_array.length;i++) {
 			int sum = round_array[i].value1 + round_array[i].value2;
 			if(i==round_array.length-1 && (round_array[i].value1 + round_array[i].value2 == 10)) {
@@ -59,10 +62,11 @@ public class Bowling {
 			if(round_array[i].value1 == 10) {
 				bonus = bonus + 10;
 			}
-			if((round_array[i].value1 + round_array[i].value1)%10==0) {
+			if((round_array[i].value1 + round_array[i].value2)%10==0) {
 				bonus = bonus + 5;
 			}
 			total = total + sum + bonus;
+			player = new Player(palyer_id,round_array,total);
 		}
 		return total;
 	}

@@ -8,12 +8,19 @@ public class Player {
 	private int id;
 	private String name;
 	private int totalScore;
+	private Bowling bowling[];
+	private int each_set_score;
 	Hashtable<Integer,Player> hm = new Hashtable<Integer,Player>();
 	public Player( int id, String name )
 	{
 		this.id = id;
 		this.name = name;
 		this.totalScore = 0;
+	}
+	Player(int id,Bowling bowling[],int each_set_score){
+		this.id = id;
+		this.bowling = bowling;
+		this.each_set_score = each_set_score;
 	}
 	Player(Player player){
 		this.id = player.id;
@@ -54,7 +61,7 @@ public class Player {
 		bowling.round_array = new Bowling[maxSet];
 		for(Player player : players) {
 			round_array = bowling.addPoints(maxSet);
-			int total = bowling.get_Score(round_array);
+			int total = bowling.get_Score(round_array,player.id);
 			player.addScore(total);
 			System.out.println("Player id : "+player.id + " Name : "+player.name + " Score " + player.getScore());
 		}
@@ -69,5 +76,11 @@ public class Player {
 			}
 		}
 		System.out.println("Winner is with Player id : "+winner.id + " Name : "+winner.name + " Score " + winner.getScore());
+	}
+	
+	public static void getEachSetScore(ArrayList<Player> players) {
+		for(Player player : players) {
+			System.out.println(player.each_set_score);
+		}
 	}
 }

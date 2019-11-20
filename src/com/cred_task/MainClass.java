@@ -13,6 +13,7 @@ public class MainClass {
 		ArrayList<Player> players = Player.getPlayerDetails();
 		Player.startGame(players);
 		Player.getWinner(players);
-		strategies.mapping(8,2);
+		Player.getEachSetScore(players);
+//		strategies.mapping(8,2);
 	}
 }
