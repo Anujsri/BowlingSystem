@@ -30,25 +30,30 @@ public class Bowling {
 		round_array[index] = pinsknockeds;
 	}
 	public Bowling[] addPoints(int round) {
+		Random rand = new Random();
 		for (int i=0;i<round;i++) {
-			int r1 = genrateRandom(0,11); 
-	        int r2 = genrateRandom(r1,11);
+			int r1 = rand.nextInt(11); 
+	        int r2 = rand.nextInt(11-r1);
 	        if(i==round-1 && (r1 + r2 == 10)) {
-	        	int r3 = genrateRandom(0,11);
+	        	int r3 = rand.nextInt(11);
 	        	this.setPinsKnocked(r1,r2,r3,i);
 			}
 	        this.setPinsKnocked(r1,r2,i);
 		} 
 		return round_array;
 	}
-	public int genrateRandom(int range,int max) {
-		Random rand = new Random();
-		if(range%10 ==0) {
-			return rand.nextInt(max);
+	public int  getBonus(int try1,int try2) {
+		ArrayList<Strategies> strategies = Strategies.getStrategies();
+		int bonus = 0;
+		for(Strategies strategie : strategies) {
+			if((try1 ==10)) {
+				bonus = strategie.bonus;
+			}
+			else if(try1 + try2 == strategie.input1 + strategie.input2) {
+				bonus = strategie.bonus;
+			}
 		}
-		else{
-			return rand.nextInt(max-range);
-		}
+		return bonus;
 	}
 	public int get_Score(Bowling[] round_array,int palyer_id) {
 		int total = 0;
@@ -61,12 +66,7 @@ public class Bowling {
 				sum = sum + round_array[i].value3; 
 				bowling = new Bowling(bowling,round_array[i].value3);
 			}
-			if(round_array[i].value1 == 10) {
-				bonus = bonus + 10;
-			}
-			if((round_array[i].value1 + round_array[i].value2)%10==0) {
-				bonus = bonus + 5;
-			}
+			bonus = getBonus(round_array[i].value1,round_array[i].value2);
 			total = total + sum + bonus;
 			players.add(new Player(palyer_id,bowling,total));
 		}
