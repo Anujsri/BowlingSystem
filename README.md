@@ -78,6 +78,7 @@ I  am using five classes to desing it
  
  2. User is asked whether he wants sees detail view of game or not, if he enters yes : detailed view will be shown of each 
      player else program will exit.
-     
+<img width="700" alt="Screenshot 2019-11-21 at 1 47 37 AM" src="https://user-images.githubusercontent.com/25398413/69280040-9314aa00-0c0b-11ea-8ab3-0b103e75cd34.png">
+ 
      
 # Thank You!
