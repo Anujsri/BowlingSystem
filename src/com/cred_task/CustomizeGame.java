@@ -6,15 +6,17 @@ public class CustomizeGame {
 	
 	Scanner sc = new Scanner(System.in);
 	Strategies strategie,strategie1;
-	int maxSet = 10;
+	static int maxSet=10;
 	
 	CustomizeGame(){
 		strategie = new Strategies();
 		strategie.setStrategies("try1 + try2 == 10","spare",5);
 		strategie.setStrategies("try1 == 10","strike",10);
 	}
+	CustomizeGame(int maxSet){
+		this.maxSet = maxSet;
+	}
 	public void getChoice(int choice) {
-		int bonus_is;
 		switch(choice) {
 			case 1:
 				System.out.println("Enter strategie name");
@@ -28,6 +30,7 @@ public class CustomizeGame {
 			case 2:
 				System.out.println("Enter number of set");
 				maxSet = sc.nextInt();
+				new CustomizeGame(maxSet);
 				break;
 			default:
 				System.out.println("will take default values");

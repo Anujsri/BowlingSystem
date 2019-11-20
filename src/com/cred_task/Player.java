@@ -8,16 +8,17 @@ public class Player {
 	private int id;
 	private String name;
 	private int totalScore;
-	private Bowling bowling[];
+	private Bowling bowling;
 	private int each_set_score;
 	Hashtable<Integer,Player> hm = new Hashtable<Integer,Player>();
+	Player(){}
 	public Player( int id, String name )
 	{
 		this.id = id;
 		this.name = name;
 		this.totalScore = 0;
 	}
-	Player(int id,Bowling bowling[],int each_set_score){
+	Player(int id,Bowling bowling,int each_set_score){
 		this.id = id;
 		this.bowling = bowling;
 		this.each_set_score = each_set_score;
@@ -53,11 +54,11 @@ public class Player {
 		
 		return players;	
 	}
-	public static void startGame(ArrayList<Player> players) {
-		CustomizeGame customizeGame = new CustomizeGame();
+	public void startGame(ArrayList<Player> players) {
 		Bowling bowling = new Bowling();
 		Bowling round_array[];
-		int maxSet = customizeGame.maxSet;
+		int maxSet = CustomizeGame.maxSet;
+		System.out.println("maxSet in pka : "+ maxSet);
 		bowling.round_array = new Bowling[maxSet];
 		for(Player player : players) {
 			round_array = bowling.addPoints(maxSet);
@@ -66,7 +67,7 @@ public class Player {
 			System.out.println("Player id : "+player.id + " Name : "+player.name + " Score " + player.getScore());
 		}
 	}
-	public static void getWinner(ArrayList<Player> players) {
+	public void getWinner(ArrayList<Player> players) {
 		int maximum = 0;
 		Player winner = new Player(0,"");
 		for(Player player : players) {
@@ -78,9 +79,11 @@ public class Player {
 		System.out.println("Winner is with Player id : "+winner.id + " Name : "+winner.name + " Score " + winner.getScore());
 	}
 	
-	public static void getEachSetScore(ArrayList<Player> players) {
+	public static void getEachSetScore() {
+		ArrayList<Player> players = Bowling.players;
+		System.out.println("Anuj");
 		for(Player player : players) {
-			System.out.println(player.each_set_score);
+			System.out.println("Player id :  " +player.id+ ", try1 score " + player.bowling.value1 +", try2 score "+ player.bowling.value2 + ", Set Score "+player.each_set_score);
 		}
 	}
 }
