@@ -72,5 +72,7 @@ I  am using five classes to desing it
       he can change number of set default was 10 
 <img width="675" alt="Screenshot 2019-11-21 at 2 00 13 AM" src="https://user-images.githubusercontent.com/25398413/69279508-8774b380-0c0a-11ea-8f3e-58f6565bc353.png">
 
-
+ ###### if he enters 3:
+ it will take default values
+ <img width="618" alt="Screenshot 2019-11-21 at 1 46 17 AM" src="https://user-images.githubusercontent.com/25398413/69279688-edf9d180-0c0a-11ea-9e21-4a2ee193a235.png">
 # Thank You!
