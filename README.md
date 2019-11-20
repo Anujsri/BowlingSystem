@@ -75,4 +75,9 @@ I  am using five classes to desing it
  ###### if he enters 3:
  it will take default values
  <img width="618" alt="Screenshot 2019-11-21 at 1 46 17 AM" src="https://user-images.githubusercontent.com/25398413/69279688-edf9d180-0c0a-11ea-9e21-4a2ee193a235.png">
+ 
+ 2. User is asked whether he wants sees detail view of game or not, if he enters yes : detailed view will be shown of each 
+     player else program will exit.
+     
+     
 # Thank You!
