@@ -3,6 +3,7 @@ import java.util.*;
 /** As a user has two try in each sets so we need two inputs to define a new rule(Strategies) like 
 * spare and strike and bonus based on the Strategies */
 public class Strategies {
+	
 	int input1; /** First input for rule*/
 	int input2; /** Second input for rule*/
 	int bonus;  /** Bonus for this rule*/

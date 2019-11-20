@@ -4,6 +4,7 @@ import java.util.Scanner;
 /** this class used to store each players total score,score of each set,and values which he got
  * in try1 and try2 in each set and bonus based on the Strategies */
 public class Player {
+	
 	private int id; 			/** player id*/
 	private String name;		/** player name*/
 	private int totalScore;		/** each player's score*/
@@ -69,7 +70,6 @@ public class Player {
 		CustomizeGame customizeGame = new CustomizeGame();
 		Bowling round_array[];
 		int maxSet = customizeGame.maxSet;
-		System.out.println("maxSet in pka : "+ maxSet);
 		bowling.round_array = new Bowling[maxSet];
 		for(Player player : players) {
 			round_array = bowling.addPoints(maxSet);

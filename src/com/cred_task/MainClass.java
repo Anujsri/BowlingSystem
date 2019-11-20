@@ -10,6 +10,7 @@ import java.util.Scanner;
 * @since   2019-11-19
 */
 public class MainClass {
+	
 	private static Scanner sc;
 	public static void main(String[] args) {
 		sc = new Scanner(System.in);

@@ -3,6 +3,7 @@ import java.util.Scanner;
 /** The purpose of this class to customize the Bowling Alley game like in problem statement we have given two
 * strategies and set size 2 but by this class based on user's choice we can add more strategies and can change set size*/
 public class CustomizeGame {
+	
 	Scanner sc = new Scanner(System.in);
 	
 	/** creating strategies object to add new strategies or initialize default strategies i.e spare and strike*/
